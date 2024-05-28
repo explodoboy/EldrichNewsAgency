@@ -1,0 +1,510 @@
+/* Author: Christopher C. */
+
+/* <| TABLE OF CONTENTS |>
+
+ * UNIVERSAL_RULES
+ * VIEWPORT_MOBILE
+ *                / VM_HEADER
+ *                / VM_NAV
+ *                / VM_MAIN
+ *                / VM_FOOTER
+ *                / MISC_CLASSES
+ * VIEWPORT_TABLET
+ *                / VT_HEADER
+ *                / VT_NAV
+ *                / VT_MAIN
+ *                / MISC_CLASSES
+ * VIEWPORT_OTHER
+
+*/
+
+
+/* CSS reset, for best spacing consistency between browsers */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/* <| UNIVERSAL_RULES |> */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3f3f3f;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Content-containing portion of the page, appears when screen width gets too high */
+#container {
+    background-color: #fff;
+}
+
+
+/* <| VIEWPORT_MOBILE |> */
+
+/* Hide anything with the "tablet-desktop" class, to save space */
+.tablet-desktop, #links {
+    display: none;
+}
+
+
+#top {
+    padding: 0.5em 0 0 0;
+    background-color: #000;
+}
+
+
+/* [VM_HEADER] */
+header {
+    text-align: center;
+}
+
+header img {
+    margin: 0 auto;
+    height: 190px;
+    min-width: 190px;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+header h2 {
+    font-size: 1.1em;
+}
+
+header p {
+    margin: 0.5em 0 1em 0;
+}
+
+#address-bar {
+    overflow: auto;
+    background-color: #000;
+}
+
+#address-bar h2 {
+    overflow: inherit;
+    text-align: left;
+    background-color: #111;
+    color: #fff;
+    margin: 0.25em 0.25em 0 0.25em;
+    padding: 0.25em;
+    padding-left: 0.5em;
+    border-radius: 8px;
+}
+
+/* [VM_NAV] */
+nav {
+    text-align: center;
+    padding-top: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    font-size: 1.5em;
+    border-top: 4px solid #62755f;
+}
+
+nav li a:hover {
+    background-color: #283027;
+    color: #e1a0ff;
+}
+
+/*nav li:last-child {
+    border-bottom: 3px solid #212545;
+}*/
+
+nav li a {
+    display: block;
+    color: #d0f6c9;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+
+/* [VM_MAIN] */
+main {
+    font-size: 1em; /* Not necessary, but explicit definition is easier to understand */
+    border-top: 4px solid #62755f;
+    border-bottom: 2px solid #62755f;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: block;
+    clear: both;
+}
+
+main p, main h1, main h2, main h3, main h4 {
+    margin: 1em 0;
+}
+
+main ul {
+    margin: 0 0 0 1.2em;
+}
+
+table, th, td {
+    font-size: 0.9em;
+    margin: 1em auto;
+    border: 3px solid #212545;
+    border-collapse: collapse;
+    width: auto;
+    padding: 0.5em;
+}
+
+td {
+    overflow: hidden;
+}
+
+td a {
+    display: block;
+    margin: -10em;
+    padding: 10em;
+}
+
+/* Links should always be in the first column */
+table .active-link:hover {
+    background-color: #283027;
+}
+
+section {
+    border-top: 1px solid #62755f;
+    padding: 1em 0;
+}
+
+section:first-child {
+    border-top: none;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+figure {
+    margin: 2em auto;
+}
+
+figure img {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0.5em;
+    border: 4px solid #212545;
+    background: rgba(33, 37, 69, 0.5);
+}
+
+.figure-small {
+    max-width: 50%;
+}
+
+.figure-large {
+    width: 95%;
+}
+
+.figure-key {
+    width: 8em;
+}
+
+/* Galaxy Fold is too small for two columns; almost all phones easily support 2 otherwise. */
+.grid-key {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+figcaption {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0.25em 0;
+    text-align: center;
+    font-size: 1.25em;
+    color: #fff;
+    background: rgba(33, 37, 69, 1);
+}
+
+#under_construction {
+    border-radius: 5em;
+}
+
+
+/* [VM_FOOTER] */
+footer {
+    padding: 1em;
+}
+
+footer p {
+    font-size: 0.75em;
+    text-align: center;
+    padding: 0 1em;
+}
+
+footer p a {
+    text-decoration: none;
+    color: #60008d;
+}
+
+footer p a:hover {
+    text-decoration: none;
+    color: #c038ff;
+}
+
+
+/* [MISC_CLASSES] */
+
+/* Text formatting */
+.text-bold {
+    font-weight: 800;
+}
+
+.text-normal {
+    font-weight: 600;
+}
+
+.text-light {
+    font-weight: 400;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.active-link {
+    color: #60008d;
+}
+
+.active-link:hover {
+    color: #c038ff;
+}
+
+.inactive-link {
+    color: #910101;
+    text-decoration: underline;
+}
+
+/* Spacing & alignment */
+.unspaced-top {
+    margin-top: 0;
+}
+
+.unspaced-bottom {
+    margin-bottom: 0;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-justify {
+    text-align: justify;
+}
+
+/* News documents. */
+#news {
+    display: block;
+    margin: 0 auto;
+    padding: 1em 0;
+    border-top: 1px solid #808080;
+}
+
+#news section {
+    width: 100%;
+    margin: 0 0;
+    padding: 1em;
+    border-top: none;
+    border-bottom: 1px solid #808080;
+}
+
+/* Add a column when screen size is large enough. */
+@media screen and (min-width: 310px), print {
+    .grid-key {
+        grid-template-columns: auto auto;
+    }
+}
+
+/* Add another column when screen size is large enough. */
+@media screen and (min-width: 450px), print {
+    .grid-key {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+/* Add another column when screen size is large enough. */
+@media screen and (min-width: 590px), print {
+    .grid-key {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+/* Add another column when screen size is large enough. */
+@media screen and (min-width: 730px), print {
+    .grid-key {
+        grid-template-columns: auto auto auto auto auto;
+    }
+}
+
+/* Incease table size and key image size when screen is large enough */
+@media screen and (min-width: 640px) {
+    table, th, td {
+        font-size: 1em;
+    }
+}
+
+/* Limit width of non-news content section */
+@media screen and (min-width: 743px) { /* +33px more than <section> width */
+    section {
+        width: 710px;
+        margin: 0 auto;
+    }
+}
+
+
+/* <| VIEWPORT_TABLET |> */
+@media screen and (min-width: 600px), print {
+    
+    /* Now that there is more screen-space, show tablet/desktop stuff and hide mobile-only. */
+    .tablet-desktop, #links { 
+        display: block;
+    }
+
+    .mobile, #hamburger {
+        display: none;
+    }
+
+    /* [VT_HEADER] */
+
+    /* [VT_NAV] */
+    nav ul {
+        list-style: none;
+        padding: 0em 1em 1em 1em;
+    }
+
+    nav li {
+        display: inline-block;
+        border: 4px solid #62755f;
+        margin: 0.1em;
+    }
+
+    nav li a {
+        padding: 0.1em 0.75em;
+    }
+
+    /* [VT_MAIN] */
+    figure {
+        width: 70%;
+        max-height: 15%;
+    }
+}
+
+
+/* <| VIEWPORT_OTHER |> */
+
+/* This used to convert the news section into two columns, but it's disabled for now due to being a headache. This would force me to generate news <section> tags in groups of 6, instead of the nicer-looking 3 (when I can't make more than 3 stories
+@media screen and (min-width: 850px) {
+    #news {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin: 0 auto;
+        padding: 1em 0;
+    }
+
+    #news section {
+        border-left: 1px solid #808080;
+    }
+
+    #news section:nth-child(2n) {
+        border-right: 1px solid #808080;
+    }
+
+    #news section:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
+} */
+
+/* To (somewhat) recreate the look of news websites, a flex display is used. */
+@media screen and (min-width: 700px) {
+    #top {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    /* The icon goes to the left... */
+    header {
+        float: left;
+    }
+    
+    /* ...The link buttons go to the right. */
+    nav {
+        float: right;
+    }
+}
+
+/* Once the screen gets big enough, make news section into three columns */
+@media screen and (min-width: 1199px) {
+    #news {
+        display: grid;
+        grid-template-columns: 33% 34% 33%;
+        margin: 0 auto;
+        padding: 1em 0;
+    }
+
+    #news section {
+        border-left: 1px solid #808080;
+    }
+
+    #news section:nth-child(3n) {
+        border-right: 1px solid #808080;
+    }
+
+    #news section:nth-last-child(-n+3) {
+        border-bottom: none;
+    }
+}
+
+/* Limit width of news content section */
+@media screen and (min-width: 1351px) {
+    #news {
+        width: 1315px;
+        margin: 0 auto;
+    }
+
+    /*#container {
+        width: 1920px;
+        margin: 0 auto;
+    }*/
+}
+
+/* Media query for ultrawide desktop viewports */
+@media screen and (min-width: 1921px) {
+    #container {
+        width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+/* Media query for print (disabled for now)
+@media print {
+    
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+}*/
