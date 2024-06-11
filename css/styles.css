@@ -52,7 +52,7 @@ img {
 /* <| VIEWPORT_MOBILE |> */
 
 /* Hide anything with the "tablet-desktop" class, to save space */
-.tablet-desktop, #links {
+.tablet-desktop, .desktop, #links {
     display: none;
 }
 
@@ -201,8 +201,8 @@ figure img {
     width: 95%;
     margin: 0 auto;
     padding: 0.5em;
-    border: 4px solid #212545;
-    background: rgba(33, 37, 69, 0.5);
+    border: 4px solid #62755f;
+    background: rgba(33, 69, 41, 0.5);
 }
 
 .figure-small {
@@ -230,7 +230,7 @@ figcaption {
     text-align: center;
     font-size: 1.25em;
     color: #fff;
-    background: rgba(33, 37, 69, 1);
+    background: #495746;
 }
 
 #under_construction {
@@ -476,6 +476,10 @@ footer p a:hover {
 
     #news section:nth-last-child(-n+3) {
         border-bottom: none;
+    }
+
+    .desktop { 
+        display: block;
     }
 }
 
